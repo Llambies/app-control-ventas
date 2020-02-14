@@ -1,0 +1,10 @@
+insert into vendedores (nombre, apellidos, email, telefono) values ('Rochelle', 'Dennistoun', 'rdennistoun0@gravatar.com', '689-464-9493');
+insert into vendedores (nombre, apellidos, email, telefono) values ('Barbra', 'Foye', 'bfoye1@unicef.org', '211-488-9256');
+insert into vendedores (nombre, apellidos, email, telefono) values ('Fay', 'McCree', 'fmccree2@geocities.jp', '855-590-3921');
+insert into vendedores (nombre, apellidos, email, telefono) values ('Ina', 'Vittel', 'ivittel3@storify.com', '158-515-0746');
+insert into vendedores (nombre, apellidos, email, telefono) values ('Marilee', 'Goult', 'mgoult4@creativecommons.org', '642-818-7816');
+insert into vendedores (nombre, apellidos, email, telefono) values ('Udell', 'Bradforth', 'ubradforth5@google.fr', '602-852-4100');
+insert into vendedores (nombre, apellidos, email, telefono) values ('Krystalle', 'Limbrick', 'klimbrick6@tiny.cc', '412-205-4063');
+insert into vendedores (nombre, apellidos, email, telefono) values ('Nickie', 'Erlam', 'nerlam7@sun.com', '448-374-7564');
+insert into vendedores (nombre, apellidos, email, telefono) values ('Missie', 'Curle', 'mcurle8@netscape.com', '416-597-1499');
+insert into vendedores (nombre, apellidos, email, telefono) values ('Cordelie', 'Etienne', 'cetienne9@fc2.com', '574-530-1589');
