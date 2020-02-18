@@ -5,6 +5,33 @@
     <title>Title</title>
 </head>
 <body>
+<table>
+    <thead>
+    <td>Vendedor</td>
+    <td>Cliente</td>
+    <td>Fecha</td>
+    <td>Importe</td>
+    </thead>
+    <tbody id="tablaVentas"></tbody>
+</table>
 
 </body>
+
+<script>
+    fetch('../api/v1.0/ventas/').then(function (respuesta) {
+return respuesta.json();
+}).then(function (datosJson) {
+let tabla = document.getElementById("tablaVentas");
+tabla.innerHTML = "";
+datosJson.forEach(function (item) {
+//console.log(item);
+tabla.innerHTML += `<tr><td>${item.vendedor.apellidos},
+${item.vendedor.nombre}</td>
+<td>${item.cliente.nombre}</td>
+<td>${item.fecha}</td>
+<td>${item.importe}</td></tr>`;
+})
+});
+</script>
+
 </html>
