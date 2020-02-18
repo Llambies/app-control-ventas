@@ -32,26 +32,4 @@ include "modelos/$operacion-$recurso.php";
 include "vistas/$vista.php";
 
 
-$sql = 'SELECT vendedores.nombre as nombreVendedor, vendedores.apellidos as
-apellidosVendedor,clientes.nombre as nombreCliente, ventas.* FROM `ventas`,
-vendedores, clientes WHERE ventas.vendedor = vendedores.id AND
-ventas.cliente = clientes.id';
-$res = mysqli_query($conexion, $sql);
-$resultado = array();
-while($fila = mysqli_fetch_assoc($res)){
-$vendedor = array("id" => $fila["vendedor"], "nombre" =>
-$fila["nombreVendedor"], "apellidos" => $fila["apellidosVendedor"]);
-$cliente = array("id" => $fila["cliente"], "nombre" =>
-$fila["nombreCliente"]);
-$fila["vendedor"] = $vendedor;
-$fila["cliente"] = $cliente;
-unset($fila["nombreVendedor"]);
-unset($fila["apellidosVendedor"]);
-unset($fila["nombreCliente"]);
-array_push($resultado, $fila);
-}
-//header('Access‐Control‐Allow‐Origin: *');
-//header('Access‐Control‐Allow‐Methods: PUT, GET, POST, DELETE');
-//header('Content‐Type: application/json; charset=utf‐8');
-echo json_encode($resultado);
 ?>
