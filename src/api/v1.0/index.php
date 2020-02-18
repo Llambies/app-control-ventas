@@ -20,7 +20,16 @@ $recurso = array_shift($uri_array);
 3.‐ Obtener el tipo de operación solicitada...
  ***************************/
 $operacion = strtolower($_SERVER['REQUEST_METHOD']);
-
+/***************************
+4.- Preparar la salida
+ ***************************/
+$salida = array();
+$vista = 'json';
+$http_code = 404;
+// modelo
+include "modelos/$operacion-$recurso.php";
+// vista
+include "vistas/$vista.php";
 
 
 $sql = 'SELECT vendedores.nombre as nombreVendedor, vendedores.apellidos as
