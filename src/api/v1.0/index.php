@@ -23,9 +23,10 @@ $operacion = strtolower($_SERVER['REQUEST_METHOD']);
 
 
 
-switch ($operacion) {
-    case 'get':
-        $sql = 'SELECT vendedores.nombre as nombreVendedor, vendedores.apellidos as apellidosVendedor,clientes.nombre as nombreCliente, ventas.* FROM `ventas`, vendedores, clientes WHERE ventas.vendedor = vendedores.id AND ventas.cliente = clientes.id';
+$sql = 'SELECT vendedores.nombre as nombreVendedor, vendedores.apellidos as
+apellidosVendedor,clientes.nombre as nombreCliente, ventas.* FROM `ventas`,
+vendedores, clientes WHERE ventas.vendedor = vendedores.id AND
+ventas.cliente = clientes.id';
 $res = mysqli_query($conexion, $sql);
 $resultado = array();
 while($fila = mysqli_fetch_assoc($res)){
@@ -39,8 +40,6 @@ unset($fila["nombreVendedor"]);
 unset($fila["apellidosVendedor"]);
 unset($fila["nombreCliente"]);
 array_push($resultado, $fila);
-}
-        break;
 }
 //header('Access‐Control‐Allow‐Origin: *');
 //header('Access‐Control‐Allow‐Methods: PUT, GET, POST, DELETE');
